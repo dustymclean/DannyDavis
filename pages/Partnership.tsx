@@ -41,14 +41,14 @@ const Partnership: React.FC = () => {
         <div className="max-w-[1500px] mx-auto">
           <div className={`transition-all duration-[2000ms] cubic-bezier(0.19, 1, 0.22, 1) transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="flex items-center space-x-6 mb-12">
-              <span className="text-[10px] kerning-luxury text-[#A67C37] uppercase font-black">Mississippi's Medical Standard</span>
-              <div className="w-20 h-px bg-[#C5A059]/30"></div>
+              <span className="text-[10px] kerning-luxury text-[#8B6D31] uppercase font-black">Mississippi's Medical Standard</span>
+              <div className="w-20 h-px bg-[#C5A059]/30" aria-hidden="true"></div>
             </div>
             <h1 id="partnership-hero" className="text-6xl md:text-[10rem] font-serif text-[#0F0F0F] leading-[0.85] tracking-tighter mb-16">
               Patient First. <br />
               <span className="italic text-[#2E4D3E] font-medium">Always.</span>
             </h1>
-            <p className="text-xl md:text-3xl text-gray-500 font-light max-w-4xl leading-relaxed italic">
+            <p className="text-xl md:text-3xl text-gray-600 font-light max-w-4xl leading-relaxed italic">
               Experience the Mississippi standard of botanical relief. Clean, consistent, and cultivated with the precision of a veteran's discipline for those who need it most.
             </p>
           </div>
@@ -59,25 +59,25 @@ const Partnership: React.FC = () => {
       <section className="py-48 px-8 md:px-20 bg-white border-y border-gray-50" aria-label="Our Patient Promises">
         <div className="max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-24 relative">
           <div className="space-y-10">
-            <span className="font-mono text-[10px] text-[#A67C37] uppercase tracking-widest">Purity & Prowess</span>
+            <span className="font-mono text-[10px] text-[#8B6D31] uppercase tracking-widest font-bold">Purity & Prowess</span>
             <h2 className="text-4xl font-serif text-[#2E4D3E]">Clean Green.</h2>
-            <p className="text-gray-400 leading-relaxed font-light text-lg">
+            <p className="text-gray-500 leading-relaxed font-light text-lg">
               Every flower is a testament to our commitment to purity. We avoid harsh chemicals and utilize medical-grade infrastructure to ensure your relief is untainted and effective.
             </p>
           </div>
 
           <div className="space-y-10">
-            <span className="font-mono text-[10px] text-[#A67C37] uppercase tracking-widest">Consistency in Care</span>
+            <span className="font-mono text-[10px] text-[#8B6D31] uppercase tracking-widest font-bold">Consistency in Care</span>
             <h2 className="text-4xl font-serif text-[#2E4D3E]">Veteran Grown.</h2>
-            <p className="text-gray-400 leading-relaxed font-light text-lg">
+            <p className="text-gray-500 leading-relaxed font-light text-lg">
               Military discipline meets master cultivation. Our veteran-operated facility guarantees a consistent experience, harvest after harvest, so your medical regimen remains stable.
             </p>
           </div>
 
           <div className="space-y-10">
-            <span className="font-mono text-[10px] text-[#A67C37] uppercase tracking-widest">Community Stewardship</span>
+            <span className="font-mono text-[10px] text-[#8B6D31] uppercase tracking-widest font-bold">Community Stewardship</span>
             <h2 className="text-4xl font-serif text-[#2E4D3E]">Rooted Locally.</h2>
-            <p className="text-gray-400 leading-relaxed font-light text-lg">
+            <p className="text-gray-500 leading-relaxed font-light text-lg">
               Manna is woman-owned and operated right here in Mississippi. By choosing us, you aren't just choosing medicine; you're supporting a local legacy dedicated to the state's health.
             </p>
           </div>
@@ -90,15 +90,15 @@ const Partnership: React.FC = () => {
           <div className="lg:col-span-6">
             <div className="space-y-16">
               <h2 id="demand-integrity-heading" className="text-6xl md:text-9xl font-serif text-[#0F0F0F] leading-tight">Demand <span className="italic text-[#2E4D3E]">Integrity.</span></h2>
-              <div className="w-24 h-px bg-[#C5A059]"></div>
+              <div className="w-24 h-px bg-[#C5A059]" aria-hidden="true"></div>
               <div className="space-y-8 max-w-xl">
-                <p className="text-2xl text-gray-500 font-light leading-relaxed">
+                <p className="text-2xl text-gray-600 font-light leading-relaxed">
                   You deserve clean, patient-first botanical relief. If your local dispensary doesn't stock Manna, <span className="text-[#2E4D3E] font-medium italic">tell them.</span>
                 </p>
                 <div className="p-10 border border-[#2E4D3E]/10 bg-white shadow-sm rounded-2xl">
                   <h3 className="font-serif text-2xl text-[#2E4D3E] mb-4 italic">How to Ask for Manna:</h3>
-                  <p className="text-gray-400 font-light mb-6">Ask your budtender: "Do you carry Manna Farming? I'm looking for veteran-grown, medical-grade small batch flower."</p>
-                  <p className="text-[10px] kerning-luxury text-[#A67C37] uppercase font-bold">Your Voice Defines the Market.</p>
+                  <p className="text-gray-500 font-light mb-6">Ask your budtender: "Do you carry Manna Farming? I'm looking for veteran-grown, medical-grade small batch flower."</p>
+                  <p className="text-[10px] kerning-luxury text-[#8B6D31] uppercase font-bold">Your Voice Defines the Market.</p>
                 </div>
               </div>
             </div>
@@ -134,9 +134,9 @@ const Partnership: React.FC = () => {
       <section className="py-48 px-8 md:px-20 bg-white" aria-labelledby="faq-heading">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-24">
-            <span className="text-[#A67C37] text-[10px] uppercase tracking-[0.5em] font-bold mb-8 block">Patient Inquiries</span>
+            <span className="text-[#8B6D31] text-[10px] uppercase tracking-[0.5em] font-bold mb-8 block">Patient Inquiries</span>
             <h2 id="faq-heading" className="text-5xl md:text-7xl font-serif text-[#0F0F0F] mb-8">Common <span className="italic text-[#2E4D3E]">Questions.</span></h2>
-            <p className="text-xl text-gray-400 font-light max-w-2xl mx-auto">
+            <p className="text-xl text-gray-500 font-light max-w-2xl mx-auto">
               Understanding your medicine is the first step toward effective relief. Here is why patients continue to choose the Manna standard.
             </p>
           </div>
@@ -149,7 +149,7 @@ const Partnership: React.FC = () => {
               >
                 <button 
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full text-left p-10 md:p-12 flex justify-between items-center"
+                  className="w-full text-left p-10 md:p-12 flex justify-between items-center focus:outline-none focus:ring-inset focus:ring-2 focus:ring-[#2E4D3E] rounded-3xl"
                   aria-expanded={openFaq === idx}
                   aria-controls={`faq-answer-${idx}`}
                   id={`faq-question-${idx}`}
@@ -157,7 +157,7 @@ const Partnership: React.FC = () => {
                   <h3 className={`text-2xl md:text-3xl font-serif transition-colors duration-500 ${openFaq === idx ? 'text-[#2E4D3E]' : 'text-[#0F0F0F]'}`}>
                     {faq.question}
                   </h3>
-                  <span className={`text-3xl font-light transform transition-transform duration-700 ${openFaq === idx ? 'rotate-45 text-[#C5A059]' : 'text-[#2E4D3E]/20'}`} aria-hidden="true">
+                  <span className={`text-3xl font-light transform transition-transform duration-700 ${openFaq === idx ? 'rotate-45 text-[#8B6D31]' : 'text-[#2E4D3E]/20'}`} aria-hidden="true">
                     +
                   </span>
                 </button>
@@ -183,7 +183,7 @@ const Partnership: React.FC = () => {
       {/* Wholesale & Dispensary Section */}
       <section className="py-48 px-8 md:px-20 bg-[#FDFBF7] border-t border-gray-100" aria-labelledby="partnership-retail-heading">
         <div className="max-w-[1500px] mx-auto text-center mb-32">
-          <span className="text-[#A67C37] text-[10px] uppercase tracking-[0.5em] font-bold mb-8 block">Retail Partnership</span>
+          <span className="text-[#8B6D31] text-[10px] uppercase tracking-[0.5em] font-bold mb-8 block">Retail Partnership</span>
           <h2 id="partnership-retail-heading" className="text-5xl md:text-7xl font-serif text-[#0F0F0F]">Elevate Your <span className="italic text-[#2E4D3E]">Dispensary.</span></h2>
         </div>
         
@@ -191,14 +191,14 @@ const Partnership: React.FC = () => {
             <div className="p-16 border border-gray-50 bg-white flex flex-col justify-between group hover:border-[#C5A059]/30 transition-all duration-700 rounded-[2rem] shadow-sm">
                 <div>
                   <h3 className="text-3xl font-serif mb-6 text-[#2E4D3E]">Wholesale Opportunities</h3>
-                  <p className="text-gray-400 font-light leading-relaxed mb-12">We provide our partners with marketing support, education, and consistent supply chains. Join a network that prioritizes long-term success over short-term volume.</p>
+                  <p className="text-gray-500 font-light leading-relaxed mb-12">We provide our partners with marketing support, education, and consistent supply chains. Join a network that prioritizes long-term success over short-term volume.</p>
                 </div>
                 <div className="w-12 h-px bg-[#2E4D3E] group-hover:w-full transition-all duration-1000" aria-hidden="true"></div>
             </div>
             <div className="p-16 border border-gray-50 bg-white flex flex-col justify-between group hover:border-[#C5A059]/30 transition-all duration-700 rounded-[2rem] shadow-sm">
                 <div>
                   <h3 className="text-3xl font-serif mb-6 text-[#2E4D3E]">Facility Integration</h3>
-                  <p className="text-gray-400 font-light leading-relaxed mb-12">Our seed-to-sale transparency ensures your compliance is never in question. We offer full digital integration for effortless inventory management.</p>
+                  <p className="text-gray-500 font-light leading-relaxed mb-12">Our seed-to-sale transparency ensures your compliance is never in question. We offer full digital integration for effortless inventory management.</p>
                 </div>
                 <div className="w-12 h-px bg-[#2E4D3E] group-hover:w-full transition-all duration-1000" aria-hidden="true"></div>
             </div>
@@ -209,7 +209,7 @@ const Partnership: React.FC = () => {
       <section id="connect" className="py-64 bg-[#FDFBF7] overflow-hidden relative" aria-labelledby="connect-heading">
          <div className="max-w-4xl mx-auto text-center mb-24 px-8">
             <h2 id="connect-heading" className="text-6xl md:text-8xl font-serif text-[#0F0F0F] mb-12">Let's <span className="italic text-[#2E4D3E]">Connect.</span></h2>
-            <p className="text-gray-500 font-light text-2xl max-w-2xl mx-auto leading-relaxed">Whether you are a patient looking for relief or a dispensary looking for a partner, the legacy begins with a conversation.</p>
+            <p className="text-gray-600 font-light text-2xl max-w-2xl mx-auto leading-relaxed">Whether you are a patient looking for relief or a dispensary looking for a partner, the legacy begins with a conversation.</p>
          </div>
          <div className="flex justify-center">
             <ContactCard />

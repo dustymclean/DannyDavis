@@ -10,7 +10,7 @@ const InfoBubble: React.FC = () => {
     const email = "notary@northmsnotary.com";
     navigator.clipboard.writeText(email).then(() => {
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      setTimeout(() => setCopied(false), 3000);
     });
   };
 
@@ -19,7 +19,7 @@ const InfoBubble: React.FC = () => {
       {/* Popover */}
       <div 
         id="info-popover"
-        className={`absolute bottom-20 right-0 w-80 md:w-96 bg-white shadow-[0_40px_100px_rgba(0,0,0,0.1)] rounded-3xl border border-gray-100/50 p-10 transition-all duration-1000 cubic-bezier(0.2, 0, 0, 1) transform ${
+        className={`absolute bottom-20 right-0 w-80 md:w-96 bg-white shadow-[0_40px_100px_rgba(0,0,0,0.15)] rounded-3xl border border-gray-100 p-10 transition-all duration-1000 cubic-bezier(0.2, 0, 0, 1) transform ${
           isOpen ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95 pointer-events-none'
         }`}
         aria-hidden={!isOpen}
@@ -29,7 +29,7 @@ const InfoBubble: React.FC = () => {
         <div className="space-y-8">
           <div className="flex items-center space-x-4">
             <div className="w-12 h-px bg-[#C5A059]" aria-hidden="true"></div>
-            <span className="text-[9px] kerning-luxury text-[#A67C37] uppercase">The Architect</span>
+            <span className="text-[9px] kerning-luxury text-[#8B6D31] uppercase font-bold">The Architect</span>
           </div>
           
           <h4 className="font-serif text-2xl text-[#2E4D3E] italic font-medium leading-tight">Elevate Your Digital Presence.</h4>
@@ -47,21 +47,23 @@ const InfoBubble: React.FC = () => {
             <div className="relative group">
               <button 
                 onClick={handleCopyEmail}
-                className="text-[10px] kerning-luxury uppercase text-[#2E4D3E] border-b border-[#2E4D3E]/10 pb-2 hover:border-[#C5A059] transition-all inline-block w-fit text-left focus:outline-none"
-                aria-label="Copy architect email address"
+                className="text-[10px] kerning-luxury uppercase text-[#2E4D3E] border-b border-[#2E4D3E]/10 pb-2 hover:border-[#8B6D31] transition-all inline-block w-fit text-left focus:outline-none focus:ring-2 focus:ring-[#2E4D3E] focus:ring-offset-4 rounded"
+                aria-label="Copy architect email address to clipboard"
               >
-                {copied ? (
-                  <span className="text-[#C5A059] animate-pulse">Email copied to clipboard</span>
-                ) : (
-                  <span>notary@northmsnotary.com</span>
-                )}
+                <span id="copy-status" role="status" aria-live="polite">
+                  {copied ? (
+                    <span className="text-[#8B6D31] font-bold">Email copied to clipboard</span>
+                  ) : (
+                    <span>notary@northmsnotary.com</span>
+                  )}
+                </span>
               </button>
             </div>
             <a 
               href="https://northmsnotary.com" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-[10px] kerning-luxury uppercase text-[#2E4D3E] border-b border-[#2E4D3E]/10 pb-2 hover:border-[#C5A059] transition-all inline-block w-fit"
+              className="text-[10px] kerning-luxury uppercase text-[#2E4D3E] border-b border-[#2E4D3E]/10 pb-2 hover:border-[#8B6D31] transition-all inline-block w-fit focus:outline-none focus:ring-2 focus:ring-[#2E4D3E] focus:ring-offset-4 rounded"
             >
               northmsnotary.com
             </a>
@@ -69,7 +71,7 @@ const InfoBubble: React.FC = () => {
         </div>
         
         {/* Triangle tail */}
-        <div className="absolute -bottom-2 right-12 w-4 h-4 bg-white border-r border-b border-gray-100/50 rotate-45" aria-hidden="true"></div>
+        <div className="absolute -bottom-2 right-12 w-4 h-4 bg-white border-r border-b border-gray-100 rotate-45" aria-hidden="true"></div>
       </div>
 
       {/* Bubble Button */}
@@ -78,7 +80,7 @@ const InfoBubble: React.FC = () => {
         className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-1000 shadow-2xl group border ${
           isOpen 
             ? 'bg-[#2E4D3E] border-[#2E4D3E] text-white rotate-180' 
-            : 'bg-white border-gray-100 text-[#2E4D3E] hover:border-[#C5A059]'
+            : 'bg-white border-gray-100 text-[#2E4D3E] hover:border-[#8B6D31]'
         }`}
         aria-label={isOpen ? "Close creator info" : "Open creator info"}
         aria-expanded={isOpen}

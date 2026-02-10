@@ -1,8 +1,9 @@
 
 export const COLORS = {
   MANNA_GREEN: '#2E4D3E',
-  CEDAR: '#7B3F11', // Slightly deeper cedar
-  SUNSET_GOLD: '#C5A059', // More sophisticated muted gold
+  CEDAR: '#7B3F11',
+  SUNSET_GOLD: '#C5A059',
+  SUNSET_GOLD_TEXT: '#8B6D31', // ADA Compliant gold for text on light backgrounds
   CREAM: '#FDFBF7',
   OFF_BLACK: '#121212',
 };
