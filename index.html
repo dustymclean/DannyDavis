@@ -9,66 +9,25 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100;200;300;400;500;600&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
     :root {
       --manna-green: #2e4d3e;
       --sunset-gold: #c5a059;
-      --sunset-gold-dark: #a67c37;
       --cream: #fdfbf7;
       --off-black: #0f0f0f;
     }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       font-family: "Inter", sans-serif;
-      background-color: var(--cream);
-      color: var(--off-black);
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      line-height: 1.7;
+      background: var(--cream);
       margin: 0;
     }
-
-    h1, h2, h3, h4, .font-serif {
-      font-family: "Playfair Display", serif;
-      letter-spacing: -0.01em;
-    }
-
-    /* Luxury Texture Overlay */
     .noise-overlay {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 9999;
-      opacity: 0.03;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: 9999; opacity: 0.03;
       background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
-    }
-
-    /* Accessibility: Skip to Content Link */
-    .skip-to-content {
-      position: absolute;
-      top: -100px;
-      left: 0;
-      background: var(--manna-green);
-      color: white;
-      padding: 1rem;
-      z-index: 9999;
-      transition: top 0.3s;
-    }
-    .skip-to-content:focus {
-      top: 0;
     }
   </style>
 
@@ -84,9 +43,7 @@
 </head>
 
 <body>
-  <a href="#main-content" class="skip-to-content">Skip to main content</a>
   <div class="noise-overlay" role="presentation"></div>
-  
   <div id="root"></div>
 
   <script type="module" src="/index.tsx"></script>
