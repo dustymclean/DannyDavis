@@ -1,8 +1,9 @@
-name: Deploy to GitHub Pages
+name: Deploy Manna Farming Legacy
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main  # Triggers the workflow every time you push to the main branch
 
 permissions:
   contents: write
@@ -10,24 +11,25 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: 1. Sync & Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/checkout@v4
+      - name: 2. Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
 
-      - name: Install and Build
-        run: |
-          npm install
-          npm run build
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      - name: 3. Sync & Refresh (npm install)
+        run: npm install
 
-      - name: Deploy
+      - name: 4. The Integrity Check (npm run build)
+        run: npm run build
+
+      - name: 5. Deployment (Deploy to GitHub Pages)
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist # Vite builds into the dist folder
-          branch: gh-pages
+          folder: dist  # Vite builds your production-ready files into the dist folder
+          branch: gh-pages  # The branch where the web version is hosted
