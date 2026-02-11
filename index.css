@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+/* This makes your "kerning-luxury" and "gold-underline" work */
+@utility kerning-luxury {
+  letter-spacing: 0.5em;
+}
+
+@utility gold-underline {
+  border-bottom: 1px solid #c5a059;
+}
