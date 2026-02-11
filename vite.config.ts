@@ -1,17 +1,26 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
-import path from 'path'
+import path from 'path';
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
 
-export default defineConfig({
-  base: '/DannyDavis/', // Critical for GitHub Pages
-  plugins: [
-    react(),
-    tailwindcss(), // This makes the "Good Stuff" function
-  ],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
-})
+// https://vitejs.dev/config/
+export default defineConfig(() => {
+    return {
+      // Imperative: Must match your repository name exactly
+      base: '/DannyDavis/', 
+      server: {
+        port: 3000,
+        host: '0.0.0.0',
+      },
+      plugins: [
+        react(),
+        tailwindcss(), // The "Success Stack" rendering engine
+      ],
+      resolve: {
+        alias: {
+          // Standardizing your "Master Operator" pathing
+          '@': path.resolve(__dirname, '.'),
+        }
+      }
+    };
+});
