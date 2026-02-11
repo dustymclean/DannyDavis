@@ -1,9 +1,8 @@
-name: Deploy Manna Farming Legacy
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main  # Triggers the workflow every time you push to the main branch
+    branches: [main]
 
 permissions:
   contents: write
@@ -11,25 +10,23 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: 1. Sync & Checkout
+      - name: 1. Sync Code
         uses: actions/checkout@v4
 
-      - name: 2. Setup Node.js
+      - name: 2. Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
 
-      - name: 3. Sync & Refresh (npm install)
+      - name: 3. Install All Dependencies (The Good Stuff)
         run: npm install
 
-      - name: 4. The Integrity Check (npm run build)
+      - name: 4. The Integrity Check (Build)
         run: npm run build
 
-      - name: 5. Deployment (Deploy to GitHub Pages)
+      - name: 5. Deploy to Web
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist  # Vite builds your production-ready files into the dist folder
-          branch: gh-pages  # The branch where the web version is hosted
+          folder: dist # This is where the functional code lives after the build
+          branch: gh-pages
